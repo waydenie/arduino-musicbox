@@ -1,5 +1,5 @@
 const int song_dywtbasm[][2] PROGMEM = {
-  {84,0}, //Total Number of Notes
+  {85,0}, //Total Number of Notes
 
   {NOTE_REST,2},{NOTE_DS4,1}, {NOTE_DS4,1}, {NOTE_DS4,1},{NOTE_AS3,1},{NOTE_DS4,1},{NOTE_G4,1},              //Bar  1
   {NOTE_F4,2},  {NOTE_G4,6},                                                                                 //Bar  2
