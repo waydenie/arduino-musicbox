@@ -15,7 +15,10 @@ volatile int totalNotes  = 0;
 int   ms_per8th         = 160;
 float ms_interNotePause = 1.3;
 
-#define NUM_SONGS 2
-const int (*songs[])[2] = {song_dywtbasm,song_hhello};
-
+const int song_null[][2] PROGMEM = {
+  {2,0},
+  {NOTE_REST,1}
+};
+#define NUM_SONGS 3
+const int (*songs[])[2] = {song_null,song_dywtbasm,song_hhello};
 
