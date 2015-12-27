@@ -13,6 +13,8 @@
 #define NOTE_VAL 0
 #define NOTE_LEN 1
 
+#define DB_TIME  500    // Interrupt switch debounce time (ms)
+
 volatile int melodyNum   = 0;
 volatile int currentNote = 1;
 volatile int totalNotes  = 0;
