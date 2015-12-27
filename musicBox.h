@@ -2,8 +2,13 @@
 #include "song_dywtbasm.h"
 #include "song_hhello.h"
 
-#define NEXT_PIN 2
-#define SPK_PIN 11
+#define NEXT_PIN 2      // Next song interrupt switch 
+#define SPK_PIN 11      // Speaker 
+#define CRWN_TOP_PIN 10 // Crown top LED
+#define CRWN_IL_PIN  3  // Crown inside left LED
+#define CRWN_OL_PIN  5  // Crown outside left LED
+#define CRWN_OR_PIN  6  // Crown outside right LED
+#define CRWN_IR_PIN  9  // Crown inside right LED
 
 #define NOTE_VAL 0
 #define NOTE_LEN 1
