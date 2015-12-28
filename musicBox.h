@@ -1,5 +1,6 @@
 #include "pitches.h"
 #include "song_dywtbasm.h"
+#include "song_lroyals.h"
 #include "song_hhello.h"
 
 #define NEXT_PIN 2      // Next song interrupt switch 
@@ -28,5 +29,5 @@ const int song_null[][2] PROGMEM = {
   {NOTE_REST,1}
 };
 #define NUM_SONGS 3
-const int (*songs[])[2] = {song_null,song_dywtbasm,song_hhello};
+const int (*songs[])[2] = {song_null,song_dywtbasm,song_lroyals,song_hhello};
 
