@@ -20,6 +20,7 @@ volatile int currentNote = 1;
 volatile int totalNotes  = 0;
 
 int   ms_per8th         = 160;
+int   ms_perNote        = 80;
 float ms_interNotePause = 1.3;
 
 const int song_null[][2] PROGMEM = {

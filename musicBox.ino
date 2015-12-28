@@ -8,6 +8,7 @@ void nextSong() {
   if (interrupt_time - last_interrupt_time > DB_TIME) {
     melodyNum=++melodyNum>=NUM_SONGS?0:melodyNum;
     totalNotes = pgm_read_word(&songs[melodyNum][0][NOTE_VAL]);
+    ms_perNote = pgm_read_word(&songs[melodyNum][0][NOTE_LEN]);
     currentNote=1;  
     noTone(SPK_PIN);
   }
@@ -15,7 +16,7 @@ void nextSong() {
 }
 
 void playNote(int note, int noteLen) {
-  int noteDur = ms_per8th * noteLen;
+  int noteDur = ms_perNote * noteLen;
   
   tone(SPK_PIN, note, noteDur);
   delay((int)(ms_interNotePause * noteDur));
@@ -26,6 +27,7 @@ void setup() {
 
   attachInterrupt(digitalPinToInterrupt(NEXT_PIN), nextSong, RISING);
   totalNotes = pgm_read_word(&songs[melodyNum][0][NOTE_VAL]);
+  ms_perNote = pgm_read_word(&songs[melodyNum][0][NOTE_LEN]);
 
   pinMode(CRWN_TOP_PIN,OUTPUT);digitalWrite(CRWN_TOP_PIN,HIGH);
   pinMode(CRWN_OR_PIN,OUTPUT); digitalWrite(CRWN_OR_PIN,HIGH);
